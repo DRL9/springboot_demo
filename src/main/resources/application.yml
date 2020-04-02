@@ -1,2 +1,14 @@
 server:
   port: 8099
+
+
+spring:
+  profiles:
+    active: dev
+  kafka:
+    consumer:
+      group-id: foo
+      #      获取最早的消息
+      auto-offset-reset: earliest
+    #      如果不配置，默认是这个
+    bootstrap-servers: localhost:9092
