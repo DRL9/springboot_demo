@@ -3,12 +3,24 @@ server:
 
 
 spring:
-  profiles:
-    active: dev
   kafka:
     consumer:
       group-id: foo
       #      获取最早的消息
       auto-offset-reset: earliest
+
+---
+# dev
+spring:
+  profiles:
+    active: dev
+  kafka:
     #      如果不配置，默认是这个
     bootstrap-servers: localhost:9092
+
+---
+# prod
+spring:
+  profiles: prod
+logging:
+  config: classpath:log4j2-prod.xml
