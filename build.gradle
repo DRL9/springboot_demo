@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.6.RELEASE'
+    id 'org.springframework.boot' version '2.6.1'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
     id 'groovy'
@@ -24,7 +24,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-log4j2'
     implementation('org.springframework.kafka:spring-kafka')
     implementation 'com.alibaba:fastjson:1.2.67'
-    
+
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation 'org.springframework.kafka:spring-kafka-test'
     testImplementation("org.codehaus.groovy:groovy-all:2.5.2")
